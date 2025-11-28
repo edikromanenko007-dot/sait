@@ -1,0 +1,152 @@
+[
+  {
+    "id": "7b9fd3bc-26d6-419b-8ecb-9f459ed76182",
+    "name": "Папа может",
+    "description": "Сочные соски гриль!",
+    "price": 140,
+    "category": "Колбаса и сосиски",
+    "image": "/uploads/176aabf0-152a-413f-bec8-6f3ca8f3a4d6.webp",
+    "ownerId": "6b6890c8-f5ac-43a6-8979-fdb27c9300f6",
+    "createdAt": 1762762273508
+  },
+  {
+    "id": "caa5878a-9e9b-41ad-bca8-dabf7b52ff82",
+    "name": "Колбаса",
+    "description": "Докторская колбаса - высший сорт вареной колбасы!",
+    "price": 169,
+    "category": "Колбаса и сосиски",
+    "image": "/uploads/9d4eafd0-91b2-487c-9b3d-359ebdf404a4.png",
+    "ownerId": "6b6890c8-f5ac-43a6-8979-fdb27c9300f6",
+    "createdAt": 1762762956964
+  },
+  {
+    "id": "f8c2174f-30b3-467c-8bec-9660ff93a074",
+    "name": "Сардельки",
+    "description": "Домашние сардельки из натуральных продуктов!",
+    "price": 209,
+    "category": "Колбаса и сосиски",
+    "image": "/uploads/8358b596-d3f0-449e-8502-0529e33c5ee0.webp",
+    "ownerId": "6b6890c8-f5ac-43a6-8979-fdb27c9300f6",
+    "createdAt": 1762763024503
+  },
+  {
+    "id": "758fe85f-aa53-4e4a-9274-5d567f1855c6",
+    "name": "Coca Cola",
+    "description": "Отличный освежающий напиток в жаркие дни!",
+    "price": 99,
+    "category": "Вода и напитки",
+    "image": "/uploads/b4a8483a-31ab-40d7-8d35-773d0bcffd6b.webp",
+    "ownerId": "6b6890c8-f5ac-43a6-8979-fdb27c9300f6",
+    "createdAt": 1762763086600
+  },
+  {
+    "id": "0605a68f-6973-4360-b5a8-362587dbe10a",
+    "name": "Fanta",
+    "description": "Сильногазированный, освещающий напиток!",
+    "price": 120,
+    "category": "Вода и напитки",
+    "image": "/uploads/88010ec5-f22f-45d0-8379-fb01fec9c15f.png",
+    "ownerId": "6b6890c8-f5ac-43a6-8979-fdb27c9300f6",
+    "createdAt": 1762763236964
+  },
+  {
+    "id": "e03b74dc-4c82-40ab-b92d-88c819f8bd57",
+    "name": "AQUA Fresh",
+    "description": "Вода с лимонным вкусом!",
+    "price": 80,
+    "category": "Вода и напитки",
+    "image": "/uploads/a34c9114-c743-485c-9e58-e9a54dbdad7c.png",
+    "ownerId": "6b6890c8-f5ac-43a6-8979-fdb27c9300f6",
+    "createdAt": 1762763298580
+  },
+  {
+    "id": "dc62476e-3dde-42e2-8949-9148b7e37e4a",
+    "name": "Milka",
+    "description": "Шоколад высшего сорта!",
+    "price": 130,
+    "category": "Сладкое",
+    "image": "/uploads/50be5f63-d6e2-400c-aa03-125782059e59.png",
+    "ownerId": "6b6890c8-f5ac-43a6-8979-fdb27c9300f6",
+    "createdAt": 1762763346014
+  },
+  {
+    "id": "e98573ca-40ce-46d0-991f-93758501f2e4",
+    "name": "OREO",
+    "description": "Идеальное печенье для завтрака!",
+    "price": 100,
+    "category": "Сладкое",
+    "image": "/uploads/56c43f04-1ade-400c-a8a1-a18c331d4428.png",
+    "ownerId": "6b6890c8-f5ac-43a6-8979-fdb27c9300f6",
+    "createdAt": 1762763400073
+  },
+  {
+    "id": "0616fab0-0951-45bf-9e21-9766797fb440",
+    "name": "HARIBO",
+    "description": "Эти жевательные мишки сделаны с фруктовыми соками, которые придают им яркий вкус!",
+    "price": 150,
+    "category": "Сладкое",
+    "image": "/uploads/9afc5003-3fe6-469c-877d-d2f53f3fa2d8.webp",
+    "ownerId": "6b6890c8-f5ac-43a6-8979-fdb27c9300f6",
+    "createdAt": 1762763497514
+  },
+  {
+    "id": "f09c5556-f4ad-4353-b479-4a2cf4ad1d62",
+    "name": "Ржаной хлеб",
+    "description": "Зерновой хлеб с семечками!",
+    "price": 55,
+    "category": "Хлеб и выпечка",
+    "image": "/uploads/0fa37cd1-36e4-48c9-9410-25e278c0618b.webp",
+    "ownerId": "6b6890c8-f5ac-43a6-8979-fdb27c9300f6",
+    "createdAt": 1762763552158
+  },
+  {
+    "id": "8596f4d6-bb0e-436f-b672-ca39b99b8bd6",
+    "name": "Пирожки",
+    "description": "Домашние пирожки с фруктовой начинкой!",
+    "price": 189,
+    "category": "Хлеб и выпечка",
+    "image": "/uploads/778c3185-1f03-4e07-915d-8736eb8316d1.webp",
+    "ownerId": "6b6890c8-f5ac-43a6-8979-fdb27c9300f6",
+    "createdAt": 1762763587162
+  },
+  {
+    "id": "3673c193-ffa6-4c2f-ab77-c8ffc852be8d",
+    "name": "MAK",
+    "description": "Булочки с маком!",
+    "price": 119,
+    "category": "Хлеб и выпечка",
+    "image": "/uploads/503d9645-5594-4980-8473-5fb5b6350f9a.webp",
+    "ownerId": "6b6890c8-f5ac-43a6-8979-fdb27c9300f6",
+    "createdAt": 1762763627471
+  },
+  {
+    "id": "bdb11eb2-8385-430e-bbb5-fd249d22ff0e",
+    "name": "Бананы",
+    "description": "Тропический нектар в каждой дольке!",
+    "price": 79,
+    "category": "Овощи и фрукты",
+    "image": "/uploads/8d4cc912-6dee-4d0b-843d-09423f7423b7.webp",
+    "ownerId": "6b6890c8-f5ac-43a6-8979-fdb27c9300f6",
+    "createdAt": 1762763870932
+  },
+  {
+    "id": "666b2550-98fa-4f11-a351-17438a7ff6c9",
+    "name": "Яблоки",
+    "description": "Сочные яблоки с медовым вкусом и нежным ароматом!",
+    "price": 119,
+    "category": "Овощи и фрукты",
+    "image": "/uploads/acdc5f95-fa88-4476-bce0-ba802e65f0cb.webp",
+    "ownerId": "6b6890c8-f5ac-43a6-8979-fdb27c9300f6",
+    "createdAt": 1762763928638
+  },
+  {
+    "id": "99c31269-a4b8-42b6-9c7b-3bb806bffedb",
+    "name": "Картофель",
+    "description": "Отборный, свежий урожай!",
+    "price": 99,
+    "category": "Овощи и фрукты",
+    "image": "/uploads/bd11ff4f-881f-4169-a025-67d9a1e9f8eb.webp",
+    "ownerId": "6b6890c8-f5ac-43a6-8979-fdb27c9300f6",
+    "createdAt": 1762763971096
+  }
+]
