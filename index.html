@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Магазин (GitHub Pages)</title>
+<style>
+body { font-family: sans-serif; padding: 20px; }
+.hidden { display: none; }
+.card { border: 1px solid #ccc; padding: 10px; margin: 10px 0; border-radius: 8px; }
+input, button { padding: 8px; margin: 5px 0; }
+</style>
+</head>
+<body>
+<h1>Магазин</h1>
+<nav>
+<button id="loginBtn">Войти</button>
+<button id="logoutBtn" class="hidden">Выйти</button>
+<button id="registerBtn">Регистрация</button>
+</nav>
+
+<div id="authSection" class="hidden">
+<h2 id="authTitle"></h2>
+<input id="authLogin" placeholder="Логин" /> <br />
+<input id="authPass" type="password" placeholder="Пароль" /> <br />
+<button id="authSubmit"></button>
+</div>
+
+<h2>Товары</h2>
+<div id="products"></div>
+
+<script>
+// === Simple localStorage-based auth ===
+function getUsers() {
+  return JSON.parse(localStorage.getItem('users') || '{}');
+}
+function saveUsers(u){ localStorage.setItem('users', JSON.stringify(u)); }
+function setCurrentUser(u){ localStorage.setItem('currentUser', u); }
+function getCurrentUser(){ return localStorage.getItem('currentUser'); }
+
+// === Product sample (was products.json) ===
+const productsData = [
+  { id:1, name:"Товар 1", price:100 },
+  { id:2, name:"Товар 2", price:200 },
+  { id:3, name:"Товар 3", price:300 },
+];
+
+function renderProducts(){
+  const box = document.getElementById('products');
+  box.innerHTML = '';
+  productsData.forEach(p=>{
+    const el = document.createElement('div');
+    el.className = 'card';
+    el.innerHTML = `<strong>${p.name}</strong><br>Цена: ${p.price}`;
+    box.appendChild(el);
+  });
+}
+
+// === Auth UI ===
+const authSection = document.getElementById('authSection');
+const authTitle = document.getElementById('authTitle');
+const authSubmit = document.getElementById('authSubmit');
+let authMode = '';
+
+document.getElementById('loginBtn').onclick = () => showAuth('login');
+document.getElementById('registerBtn').onclick = () => showAuth('register');
+document.getElementById('logoutBtn').onclick = () => {
+  setCurrentUser('');
+  updateUI();
+};
+
+function showAuth(mode){
+  authMode = mode;
+  authSection.classList.remove('hidden');
+  authTitle.textContent = mode === 'login' ? 'Вход' : 'Регистрация';
+  authSubmit.textContent = mode === 'login' ? 'Войти' : 'Создать аккаунт';
+}
+
+authSubmit.onclick = () => {
+  const login = document.getElementById('authLogin').value;
+  const pass = document.getElementById('authPass').value;
+  const users = getUsers();
+
+  if(authMode === 'register'){
+    if(users[login]) return alert('Пользователь существует');
+    users[login] = pass;
+    saveUsers(users);
+    alert('Аккаунт создан');
+  } else {
+    if(users[login] !== pass) return alert('Неверные данные');
+    setCurrentUser(login);
+  }
+
+  authSection.classList.add('hidden');
+  updateUI();
+};
+
+function updateUI(){
+  const user = getCurrentUser();
+  document.getElementById('logoutBtn').classList.toggle('hidden', !user);
+  document.getElementById('loginBtn').classList.toggle('hidden', !!user);
+  document.getElementById('registerBtn').classList.toggle('hidden', !!user);
+}
+
+renderProducts();
+updateUI();
+</script>
+</body>
+</html>

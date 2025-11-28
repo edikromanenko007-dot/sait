@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Магазин — FoodShop</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Анимации плавного появления */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-up { animation: fadeUp 0.6s ease forwards; }
+
+    /* Красивый полупрозрачный фон */
+    .glass {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+    }
+  </style>
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-purple-800 via-purple-700 to-indigo-700 text-white">
+
+  <div class="max-w-6xl mx-auto p-6">
+    <header class="flex items-center justify-between mb-8 animate-fade-up">
+      <div>
+        <h1 class="text-4xl font-extrabold text-white">FoodShop</h1>
+        <p id="userInfo" class="text-sm text-purple-200"></p>
+      </div>
+      <button id="logoutBtn" class="px-4 py-2 rounded-md bg-white/20 text-white hover:bg-white/30 transition">
+        Выйти
+      </button>
+    </header>
+
+    <div class="grid md:grid-cols-3 gap-8 animate-fade-up">
+      <!-- Панель добавления -->
+      <div class="col-span-1 glass rounded-2xl p-5 shadow-lg border border-white/10">
+        <h2 class="font-semibold text-xl mb-3" id="formTitle">Добавить товар</h2>
+
+        <label class="block text-sm text-purple-200">Название</label>
+        <input id="name" class="mt-1 w-full rounded-md p-2 border border-white/30 bg-white/10 text-white placeholder-purple-200 focus:ring-2 focus:ring-purple-400" placeholder="Введите название..." />
+
+        <label class="block text-sm text-purple-200 mt-3">Описание</label>
+        <textarea id="description" class="mt-1 w-full rounded-md p-2 border border-white/30 bg-white/10 text-white placeholder-purple-200 focus:ring-2 focus:ring-purple-400" placeholder="Описание товара..."></textarea>
+
+        <label class="block text-sm text-purple-200 mt-3">Цена (₽)</label>
+        <input id="price" type="number" class="mt-1 w-full rounded-md p-2 border border-white/30 bg-white/10 text-white placeholder-purple-200 focus:ring-2 focus:ring-purple-400" placeholder="0" />
+
+        <label class="block text-sm text-purple-200 mt-3">Категория</label>
+        <select id="category" class="mt-1 w-full rounded-md p-2 border border-white/30 bg-white/10 text-white focus:ring-2 focus:ring-purple-400">
+          <option>Колбаса и сосиски</option>
+          <option>Вода и напитки</option>
+          <option>Сладкое</option>
+          <option>Хлеб и выпечка</option>
+          <option>Овощи и фрукты</option>
+        </select>
+
+        <label class="block text-sm text-purple-200 mt-3">Картинка</label>
+        <input id="imageFile" type="file" accept="image/*" class="mt-1 text-white" />
+        <img id="preview" class="mt-3 w-full h-40 object-cover rounded hidden" />
+
+        <div class="flex space-x-3 mt-5">
+          <button id="saveBtn" class="flex-1 px-4 py-2 rounded-md bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-semibold hover:scale-105 transform transition">Сохранить</button>
+          <button id="resetBtn" class="px-4 py-2 rounded-md border border-white/30 text-white hover:bg-white/10 transition">Очистить</button>
+        </div>
+        <p id="formMsg" class="text-sm text-red-300 mt-3"></p>
+      </div>
+
+      <!-- Список товаров -->
+      <div class="col-span-2 space-y-6">
+        <div class="flex items-center justify-between glass p-4 rounded-2xl border border-white/10">
+          <input id="search" placeholder="Поиск..." class="p-2 rounded-md w-1/3 bg-white/10 text-white placeholder-purple-200 border border-white/30 focus:ring-2 focus:ring-purple-400">
+          <div class="flex items-center space-x-3">
+            <select id="filterCategory" class="p-2 rounded-md bg-white/10 text-white border border-white/30 focus:ring-2 focus:ring-purple-400">
+              <option value="all">Все категории</option>
+              <option>Колбаса и сосиски</option>
+              <option>Вода и напитки</option>
+              <option>Сладкое</option>
+              <option>Хлеб и выпечка</option>
+              <option>Овощи и фрукты</option>
+            </select>
+            <button id="refreshBtn" class="px-4 py-2 rounded-md bg-white/20 text-white hover:bg-white/30 transition">Обновить</button>
+          </div>
+        </div>
+
+        <div id="products" class="grid md:grid-cols-2 gap-6"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
